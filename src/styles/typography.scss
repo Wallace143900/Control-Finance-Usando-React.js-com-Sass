@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+%fonts {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: var(--gray1);
+}
+
+.title1{
+    @extend %fonts;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.title2{
+    @extend %fonts;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.text1{
+    @extend %fonts;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(gray2);
+}
+
+.text2{
+    @extend %fonts;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(gray2);
+}
+
+body {
+    @extend %fonts;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: var(gray3);
+}

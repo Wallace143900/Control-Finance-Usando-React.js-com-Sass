@@ -1,0 +1,28 @@
+.card {
+    border: var(--border-default);
+    border-radius: var(--radius-default);
+    padding: 0.5rem 1rem;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    div {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+  
+      span {
+        background-color: var(--gray4);
+        padding: 0.4rem 0.5rem;
+        border: var(--border-default);
+        border-radius: var(--radius-default);
+      }
+  
+      button {
+        padding: 0.4rem 0.5rem;
+        border: var(--border-default);
+        border-radius: var(--radius-default);
+      }
+    }
+  }

@@ -1,0 +1,62 @@
+.register {
+    padding: 2rem 1rem;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+  
+      input {
+        outline: none;
+        padding: 0.8rem;
+        border: var(--border-default);
+        border-radius: var(--radius-default);
+      }
+  
+      input:focus {
+        border-color: var(--gray3);
+      }
+    }
+  
+    .typeInfo {
+      div {
+        display: flex;
+        flex-direction: column;
+  
+        button {
+          width: 100%;
+          background-color: transparent;
+          border: var(--border-default);
+          color: var(--gray2);
+        }
+      }
+    }
+  
+    button {
+      width: fit-content;
+      padding: 0.6rem 1rem;
+  
+      align-self: center;
+  
+      border-radius: var(--radius-default);
+      background-color: var(--brand1);
+      color: var(--gray5);
+    }
+  }
+  
+  @media (min-width: 425px) {
+    .register {
+      max-width: 768px;
+      margin-inline: auto;
+  
+      .typeInfo {
+        div {
+          flex-direction: row;
+        }
+      }
+    }
+  }

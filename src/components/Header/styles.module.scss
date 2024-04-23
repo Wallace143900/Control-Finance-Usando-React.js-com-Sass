@@ -1,0 +1,15 @@
+.header {
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--gray5);
+
+    h1 {
+        span {
+            color: var(--brand1);
+        }
+    }
+}
