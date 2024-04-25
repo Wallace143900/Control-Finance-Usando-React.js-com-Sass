@@ -7,23 +7,11 @@ import "./styles/index.scss";
 
 function App() {
 
-  const [entries,setEntries] = useState([
-    {
-    id: crypto.randomUUID(),
-    value: 90.0,
-    categoryID: 0
-    },
-    {
-      id: crypto.randomUUID(),
-      value: 40.0,
-      categoryID: 1
-    },
-    {
-        id: crypto.randomUUID(),
-        value: 15.5,
-        categoryID: 0
-    }
-  ]);
+  const [entries,setEntries] = useState([]);
+
+  const deleteEntry = (id) => {
+    setEntries(entries.filter((entry) => entry.id !== id));
+  };
 
   const [type, setType] = useState("Todos");
 
@@ -32,7 +20,7 @@ function App() {
       <Header />
       <RegisterSection entries={entries} setEntries={setEntries}/>
       <ResumeSection setType={setType} setEntries={setEntries} />
-      <EntriesList entries={entries} type={type}/>
+      <EntriesList entries={entries} type={type} deleteEntry={deleteEntry} setEntries={setEntries} />
     </>
   )
 }

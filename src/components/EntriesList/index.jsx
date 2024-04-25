@@ -1,7 +1,7 @@
 import { EntryCard } from "./EntryCard";
 import styles from "./styles.module.scss";
 
-export const EntriesList = ({entries, type}) => {
+export const EntriesList = ({entries, type, deleteEntry}) => {
   return (
     <section className={styles.container}>
       <div className={styles.totalInfo}>
@@ -41,9 +41,9 @@ export const EntriesList = ({entries, type}) => {
       <ul>
         {
             type === "Todos" ?
-            entries.map((entry) => <EntryCard key={entry.id} entry={entry}/>) : type === "Entradas" 
-            ? entries.filter((entry) => entry.categoryID === 0).map((entry) => (<EntryCard key={entry.id} entry={entry}/>)) 
-            : entries.filter((entry) => entry.categoryID === 1).map((entry) => (<EntryCard key={entry.id} entry={entry}/>))
+            entries.map((entry) => <EntryCard key={entry.id} entry={entry} deleteEntry={deleteEntry}/>) : type === "Entradas" 
+            ? entries.filter((entry) => entry.categoryID === 0).map((entry) => (<EntryCard key={entry.id} entry={entry} deleteEntry={deleteEntry}/>)) 
+            : entries.filter((entry) => entry.categoryID === 1).map((entry) => (<EntryCard key={entry.id} entry={entry} deleteEntry={deleteEntry}/>))
         }
       </ul>
     </section>
