@@ -32,8 +32,8 @@ export const RegisterSection = ({entries,setEntries}) => {
       <div className={styles.typeInfo}>
         <p>Tipo de valor</p>
         <div>
-          <button onClick={() => setType(0)} className="text2">Entrada</button>
-          <button onClick={() => setType(1)} className="text2">Saída</button>
+          <button id={styles.entrada} onClick={() => setType(0)} className="text2">Entrada</button>
+          <button id={styles.saida} onClick={() => setType(1)} className="text2">Saída</button>
         </div>
       </div>
       <button onClick={register} className="text2">Inserir valor</button>

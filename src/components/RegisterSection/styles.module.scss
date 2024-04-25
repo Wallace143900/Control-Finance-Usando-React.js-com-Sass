@@ -33,6 +33,16 @@
           border: var(--border-default);
           color: var(--gray2);
         }
+
+        #entrada:hover {
+            background-color: #00ff5f;
+            transition: 0.5s;
+        }
+
+        #saida:hover {
+            background-color: #ff0000;
+            transition: 0.5s;
+        }
       }
     }
   
